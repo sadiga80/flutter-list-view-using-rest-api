@@ -44,7 +44,7 @@ class HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("Listview"),
       ),
-      body: ListView.builder(
+      body: data == null ? LinearProgressIndicator() : ListView.builder(
         itemCount: data == null ? 0 : data.length,
         itemBuilder: (BuildContext context, int index) {
           return Container(
